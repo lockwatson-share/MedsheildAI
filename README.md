@@ -1,49 +1,82 @@
 MedShield AI
 
-Secure, agentic AI-inspired framework for healthcare data
+Secure, agentic AI framework for synthetic healthcare data
 
-MedShield AI is an open-source framework designed to demonstrate HIPAA and CCPA-compliant agentic AI workflows. It enforces policy-as-code, monitors anomalies, and logs all activity using synthetic patient data to simulate real-world healthcare scenarios safely.
+MedShield AI is an open-source, research-grade framework designed to demonstrate HIPAA and CCPA-compliant agentic AI workflows. It enforces policy-as-code, monitors anomalies, and logs all activity using synthetic patient data to safely simulate real-world healthcare scenarios.
+
+Overview
+
+MedShield AI allows experimentation with semi-autonomous AI agents accessing synthetic medical data while enforcing:
+
+HIPAA compliant PHI protection
+
+CCPA Right-to-Delete simulation
+
+Policy-as-Code governance including session limits and sensitive access toggles
+
+ML-based anomaly detection for abnormal access patterns
+
+Logging and auditing of all security events
+
+Important: No real patient data is used. All data is synthetic.
 
 Features
 
-HIPAA and CCPA Compliance:
-- Blocks access to sensitive PHI fields (Name, SSN, Email, Insurance ID)
-- Respects CCPA Right-to-Delete flags
+HIPAA and CCPA Compliance
 
-Policy-as-Code:
-- Configurable session limits
-- Toggle for allowing sensitive access
-- Logging enforcement
+Blocks access to sensitive PHI fields such as Name, SSN, Email, Insurance ID
 
-Session Limits:
-- Tracks queries per session
-- Prevents exceeding maximum allowed requests
+Respects CCPA Right-to-Delete flags
 
-Sensitive Data Enforcement:
-- Access to PHI is denied automatically according to policy rules
+Policy-as-Code
 
-Anomaly Detection:
-- Isolation Forest detects unusual query patterns or spikes
-- Triggers alerts on anomalies
+Configurable session limits
 
-Audit Logging:
-- Logs all queries, blocked access attempts, and anomalies for compliance purposes
+Toggle for allowing sensitive access
 
-Agentic AI-Inspired:
-- Semi-autonomous agent that enforces policies and compliance rules without exposing real patient data
+Logging enforcement
+
+Session Limits
+
+Tracks queries per session
+
+Prevents exceeding maximum allowed requests
+
+Sensitive Data Enforcement
+
+Access to PHI is denied automatically according to policy rules
+
+Anomaly Detection
+
+Isolation Forest detects unusual query patterns or spikes
+
+Triggers alerts on anomalies
+
+Audit Logging
+
+Logs all queries, blocked access attempts, and anomalies for compliance purposes
+
+Agentic AI-Inspired
+
+Semi-autonomous agent that enforces policies and compliance rules without exposing real patient data
 
 What It Currently Does
 
-- Fully functional policy enforcement and compliance guard for synthetic medical datasets
-- Tracks sessions, sensitive access, and audit logs
-- Detects unusual usage patterns using ML-based anomaly detection
-- Uses synthetic patient data only; no real PHI is involved
+Fully functional policy enforcement and compliance guard for synthetic medical datasets
+
+Tracks sessions, sensitive access, and audit logs
+
+Detects unusual usage patterns using ML-based anomaly detection
+
+Uses synthetic patient data only; no real PHI is involved
 
 Notes and Limitations
 
-- The agentic AI is semi-agentic: it can make decisions about allowing or blocking queries, but it does not yet plan multi-step tasks or dynamically adapt policies
-- Anomaly detection is prototype-level; production use requires tuning, retraining, and alert integration
-- Designed as a proof-of-concept and educational tool for safe AI governance in healthcare
+The agentic AI is semi-agentic: it can make decisions about allowing or blocking queries, but does not yet plan multi-step tasks or dynamically adapt policies
+
+Anomaly detection is prototype-level; production use requires tuning, retraining, and alert integration
+
+Designed as a proof-of-concept and educational tool for safe AI governance in healthcare
 
 Quick Start
 
