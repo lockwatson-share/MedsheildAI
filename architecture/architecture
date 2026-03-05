@@ -1,3 +1,21 @@
+MedShield AI Architecture
+
+MedShield AI acts as a secure governance gateway between AI agents and healthcare data systems such as Electronic Health Record platforms.
+
+Instead of allowing AI models or agents to directly access patient records, all requests pass through MedShield AI where security policies, compliance checks, and anomaly detection are enforced.
+
+Typical request flow
+
+1 User or AI agent requests patient information
+2 MedShield AI policy engine evaluates the request
+3 HIPAA and CCPA compliance checks are performed
+4 Session limits and policy rules are enforced
+5 Anomaly detection monitors query behavior
+6 Approved requests access the synthetic EHR dataset
+7 All events are logged for auditing and compliance
+
+Blocked requests are logged and mitigation alerts are triggered.
+
 Architectural Diagram (Text Description)
 
 Here’s a text based architectural representation you can include in slides or docs:
