@@ -130,9 +130,13 @@ This project is open source
 
 Fork the repo
 Submit PRs for:
+
     New compliance policies
+
     Improved anomaly detection
+
     Infrastructure-as-Code integrations
+
     Agent role-based access
 
 License
