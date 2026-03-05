@@ -48,24 +48,33 @@ Notes and Limitations
 Quick Start
 
 1) Clone the repository
+   
 git clone https://github.com/lockwatson-share/MedsheildAI.git
+
 cd MedsheildAI
 
-2) Create virtual environment and activate
+3) Create virtual environment and activate
+   
 python -m venv .venv
+
 source .venv/bin/activate  # Linux or macOS
+
 .venv\Scripts\activate     # Windows
 
-3) Install dependencies
+5) Install dependencies
+   
 pip install -r requirements.txt
 
-4) Generate synthetic patients
+7) Generate synthetic patients
+   
 python generate_synthetic_patients.py
 
-5) Run the agent
+9) Run the agent
+    
 python agent/agent.py
 
-6) Or open the Jupyter notebook for interactive demos
+11) Or open the Jupyter notebook for interactive demos
+    
 jupyter notebook notebooks/demo.ipynb
 
 Contributing
