@@ -1,105 +1,81 @@
 MedShield AI
 
-Secure, agentic AI framework for synthetic healthcare data
+Secure, agentic AI-inspired framework for healthcare data
 
-MedShield AI is an open-source, research-grade framework designed to demonstrate HIPAA and CCPA-compliant agentic AI workflows. It enforces policy-as-code, monitors anomalies, and logs all activity using synthetic patient data to safely simulate real-world healthcare scenarios.
-
-Overview
-
-MedShield AI allows experimentation with semi-autonomous AI agents accessing synthetic medical data while enforcing:
-
-HIPAA compliant PHI protection
-
-CCPA Right-to-Delete simulation
-
-Policy-as-Code governance including session limits and sensitive access toggles
-
-ML-based anomaly detection for abnormal access patterns
-
-Logging and auditing of all security events
-
-Important: No real patient data is used. All data is synthetic.
+MedShield AI is an open-source framework designed to demonstrate HIPAA and CCPA-compliant agentic AI workflows. It enforces policy-as-code, monitors anomalies, and logs all activity using synthetic patient data to simulate real-world healthcare scenarios safely.
 
 Features
 
-HIPAA and CCPA Compliance
+HIPAA and CCPA Compliance:
+- Blocks access to sensitive PHI fields (Name, SSN, Email, Insurance ID)
+- Respects CCPA Right-to-Delete flags
 
-Blocks access to sensitive PHI fields such as Name, SSN, Email, Insurance ID
+Policy-as-Code:
+- Configurable session limits
+- Toggle for allowing sensitive access
+- Logging enforcement
 
-Respects CCPA Right-to-Delete flags
+Session Limits:
+- Tracks queries per session
+- Prevents exceeding maximum allowed requests
 
-Policy-as-Code
+Sensitive Data Enforcement:
+- Access to PHI is denied automatically according to policy rules
 
-Configurable session limits
+Anomaly Detection:
+- Isolation Forest detects unusual query patterns or spikes
+- Triggers alerts on anomalies
 
-Toggle for allowing sensitive access
+Audit Logging:
+- Logs all queries, blocked access attempts, and anomalies for compliance purposes
 
-Logging enforcement
-
-Session Limits
-
-Tracks queries per session
-
-Prevents exceeding maximum allowed requests
-
-Sensitive Data Enforcement
-
-Access to PHI is denied automatically according to policy rules
-
-Anomaly Detection
-
-Isolation Forest detects unusual query patterns or spikes
-
-Triggers alerts on anomalies
-
-Audit Logging
-
-Logs all queries, blocked access attempts, and anomalies for compliance purposes
-
-Agentic AI-Inspired
-
-Semi-autonomous agent that enforces policies and compliance rules without exposing real patient data
+Agentic AI-Inspired:
+- Semi-autonomous agent that enforces policies and compliance rules without exposing real patient data
 
 What It Currently Does
 
-Fully functional policy enforcement and compliance guard for synthetic medical datasets
-
-Tracks sessions, sensitive access, and audit logs
-
-Detects unusual usage patterns using ML-based anomaly detection
-
-Uses synthetic patient data only; no real PHI is involved
+- Fully functional policy enforcement and compliance guard for synthetic medical datasets
+- Tracks sessions, sensitive access, and audit logs
+- Detects unusual usage patterns using ML-based anomaly detection
+- Uses synthetic patient data only; no real PHI is involved
 
 Notes and Limitations
 
-The agentic AI is semi-agentic: it can make decisions about allowing or blocking queries, but does not yet plan multi-step tasks or dynamically adapt policies
-
-Anomaly detection is prototype-level; production use requires tuning, retraining, and alert integration
-
-Designed as a proof-of-concept and educational tool for safe AI governance in healthcare
+- The agentic AI is semi-agentic: it can make decisions about allowing or blocking queries, but it does not yet plan multi-step tasks or dynamically adapt policies
+- Anomaly detection is prototype-level; production use requires tuning, retraining, and alert integration
+- Designed as a proof-of-concept and educational tool for safe AI governance in healthcare
 
 Quick Start
 
 1) Clone the repository
-git clone https://github.com/lockwatson-share/MedsheildAI.git
-cd MedsheildAI
+      
+   git clone https://github.com/lockwatson-share/MedsheildAI.git
+   
+   cd MedsheildAI
 
 2) Create virtual environment and activate
-python -m venv .venv
-source .venv/bin/activate  # Linux or macOS
-.venv\Scripts\activate     # Windows
+   
+   python -m venv .venv
+   
+   source .venv/bin/activate  # Linux or macOS
+   
+   .venv\Scripts\activate     # Windows
 
 3) Install dependencies
-pip install -r requirements.txt
+   
+   pip install -r requirements.txt
 
 4) Generate synthetic patients
-python generate_synthetic_patients.py
+   
+   python generate_synthetic_patients.py
 
 5) Run the agent
-python agent/agent.py
+    
+   python agent/agent.py
 
 6) Or open the Jupyter notebook for interactive demos
-jupyter notebook notebooks/demo.ipynb
+       
+   jupyter notebook notebooks/demo.ipynb
 
 Contributing
 
