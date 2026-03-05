@@ -1,150 +1,88 @@
 MedShield AI
 
-Secure Agentic AI Framework for Synthetic Medical Data
-HIPAA and CCPA Compliant AI Security, Policy-as-Code, and Anomaly Detection
+Secure, agentic AI-inspired framework for healthcare data
 
-Overview
-
-MedShield AI is a research-grade framework for experimenting with agentic AI accessing medical data while enforcing:
-
-- HIPAA compliant PHI protection
-- CCPA Right to Delete simulation
-- Policy-as-Code governance (session limits, sensitive access toggles)
-- ML based anomaly detection for abnormal access patterns
-- Logging and auditing of all security events
-
-Important: No real patient data is used. All data is synthetic.
+MedShield AI is an open-source framework designed to demonstrate HIPAA and CCPA-compliant agentic AI workflows. It enforces policy-as-code, monitors anomalies, and logs all activity using synthetic patient data to simulate real-world healthcare scenarios safely.
 
 Features
 
-- Synthetic Medical Data Generator (generate_synthetic_patients.py)
-    Generates 500 patient records including demographics, diagnosis, medications, lab results, and PHI
-- MedShield AI Agent (agent/agent.py)
-    Queries patient data safely
-    Enforces session-based policy limits
-    Checks HIPAA / CCPA compliance before allowing access
-    Logs violations to logs/security_events.log
-- Policy-as-Code Engine (policy/policy_engine.py)
-    Governs runtime agent behavior
-    Enforces record limits, sensitive access, logging, and anomaly detection toggles
-- Anomaly Detection (detection/anomaly_detector.py)
-    Detects abnormal access spikes using Isolation Forest
-- Compliance Guard (compliance/hipaa_ccpa_guard.py)
-    Enforces HIPAA PHI restrictions and CCPA deletion requests
-- Mitigation / Logging (mitigation/response_handler.py)
-    Prints security alerts and writes detailed logs
+HIPAA and CCPA Compliance:
 
-Project Structure
+Blocks access to sensitive PHI fields (Name, SSN, Email, Insurance ID)
+Respects CCPA Right-to-Delete flags
+Policy-as-Code:
 
-MedShieldAI/
-    agent/                  # Agent code for querying patient data
-    compliance/             # HIPAA and CCPA enforcement
-    detection/              # Anomaly detection models
-    mitigation/             # Logging and violation handling
-    policy/                 # Policy-as-Code engine
-        policies.json       # Configurable policy rules
-    data/                   # Synthetic patient CSV dataset
-    logs/                   # Security events logs
-    notebooks/              # Demo Jupyter notebooks
-    generate_synthetic_patients.py
-    README.md
-    requirements.txt
+Configurable session limits
+Toggle for allowing sensitive access
+Logging enforcement
+Session Limits:
 
-Quick Start (Run Locally)
+Tracks queries per session
+Prevents exceeding maximum allowed requests
+Sensitive Data Enforcement:
 
-1. Clone the repository
+Access to PHI is denied automatically according to policy rules
+Anomaly Detection:
 
-git clone https://github.com/<your-username>/MedShieldAI.git
-cd MedShieldAI
+Isolation Forest detects unusual query patterns or spikes
+Triggers alerts on anomalies
+Audit Logging:
 
-2. Create a virtual environment (recommended)
+Logs all queries, blocked access attempts, and anomalies for compliance purposes
+Agentic AI-Inspired:
 
-python -m venv .venv
-source .venv/bin/activate  # macOS / Linux
-.venv\Scripts\activate     # Windows
+Semi-autonomous agent that enforces policies and compliance rules without exposing real patient data
+What It Currently Does
 
-3. Install dependencies
+Fully functional policy enforcement and compliance guard for synthetic medical datasets
+Tracks sessions, sensitive access, and audit logs
+Detects unusual usage patterns using ML-based anomaly detection
+Uses synthetic patient data only; no real PHI is involved
+Notes and Limitations
 
-pip install -r requirements.txt
+The agentic AI is semi-agentic: it can make decisions about allowing or blocking queries, but it does not yet plan multi-step tasks or dynamically adapt policies
+Anomaly detection is prototype-level; production use requires tuning, retraining, and alert integration
+Designed as a proof-of-concept and educational tool for safe AI governance in healthcare
+Quick Start
 
-4. Generate the synthetic dataset
+1) Clone the repository
 
-python generate_synthetic_patients.py
+    git clone https://github.com/lockwatson-share/MedsheildAI.git
+    
+    cd MedsheildAI
 
-5. Run the agent demo
+2) Create virtual environment and activate
 
-python agent/agent.py
+    python -m venv .venv
+    
+    source .venv/bin/activate # Linux or macOS
+    
+    .venv\Scripts\activate # Windows
 
-6. Run the Jupyter demo notebook
+3) Install dependencies
 
-jupyter notebook
+    pip install -r requirements.txt
 
-- Open notebooks/demo.ipynb
-- Run all cells to see:
-    Allowed vs blocked access
-    Session limit enforcement
-    ML anomaly detection with plots
+4) Generate synthetic patients
 
-Policies (Policy-as-Code)
+    python generate_synthetic_patients.py
 
-Located at policy/policies.json:
+5) Run the agent
 
-{
-  "max_records_per_session": 10,
-  "allow_sensitive_access": false,
-  "require_logging": true,
-  "enforce_ccpa_deletion": true,
-  "anomaly_detection_enabled": true
-}
+    python agent/agent.py
 
-Modify these values to simulate different compliance scenarios. The agent enforces these at runtime.
+6) Or open the Jupyter notebook for interactive demos
 
-Usage Examples
+    jupyter notebook notebooks/demo.ipynb
 
-from agent.agent import MedicalAIAgent
+Contributing
 
-agent = MedicalAIAgent()
+MedShield AI is open-source and free to use or develop further. Contributions are welcome for:
 
-# Allowed access
-agent.query_patient(1, "Diagnosis")
-
-# Blocked access (HIPAA PHI)
-agent.query_patient(1, "SSN")
-
-Security and Compliance
-
-HIPAA: Sensitive fields (Name, SSN, Email, InsuranceID) are blocked by default
-CCPA: If DataDeletionRequested is True, access is denied
-Policy-as-Code: Limits number of records per session, controls sensitive access, requires logging
-Anomaly Detection: Flags abnormal spikes in access counts
-
-Demo Notebook
-
-Located at notebooks/demo.ipynb
-Shows visualizations of access behavior and anomaly detection
-Ideal for interviews or showcasing agentic AI governance
-
-Contribution
-
-This project is open source
-
-Fork the repo
-Submit PRs for:
-
-    New compliance policies
-
-    Improved anomaly detection
-
-    Infrastructure-as-Code integrations
-
-    Agent role-based access
-
+Adding new compliance rules or policies
+Improving anomaly detection algorithms
+Integrating with cloud infrastructure or IaC security
+Enhancing semi-agentic decision-making toward full agentic AI
 License
 
-MIT License - free to use, modify, and distribute
-
-Notes
-
-All data is synthetic
-Ideal for research, portfolio, or interview demonstrations
-Does not use real patient information
+MedShield AI is released under the MIT License. See LICENSE file.
