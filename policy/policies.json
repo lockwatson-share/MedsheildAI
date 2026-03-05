@@ -1,0 +1,7 @@
+{
+  "max_records_per_session": 10,
+  "allow_sensitive_access": false,
+  "require_logging": true,
+  "enforce_ccpa_deletion": true,
+  "anomaly_detection_enabled": true
+}

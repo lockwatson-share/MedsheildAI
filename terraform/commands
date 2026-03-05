@@ -1,0 +1,28 @@
+Install Terraform
+terraform -v
+brew install terraform
+
+Initialize Terraform
+cd terraform
+terraform init
+
+we are defining:
+
+✔ Secure storage
+✔ Encryption at rest
+✔ Versioning (audit)
+✔ Compliance tagging
+
+Python Agent  →  Local CSV file
+Terraform     →  Defines AWS secure bucket
+
+Terraform deploys:
+    ├── Secure S3 bucket (encrypted)
+    ├── IAM role with least privilege
+    ├── EC2 sandbox for AI agent
+    └── CloudWatch logging
+
+AI Agent runs in sandbox
+AI reads data from encrypted S3
+Compliance + Policy blocks unsafe actions
+Logs stored securely

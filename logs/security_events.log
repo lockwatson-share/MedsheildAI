@@ -1,0 +1,22 @@
+2026-03-04 15:07:10.126790 | Agent: MedAgent-01 | Field: SSN | Reason: HIPAA violation: Access to PHI restricted
+2026-03-04 15:41:32.769493 | Agent: MedAgent-01 | Field: SSN | Reason: HIPAA violation: Access to PHI restricted
+2026-03-04 16:08:44.353795 | Agent: MedAgent-01 | Field: Diagnosis | Reason: CCPA violation: Data deletion requested
+2026-03-04 16:08:44.361319 | Agent: MedAgent-01 | Field: SSN | Reason: HIPAA violation: Access to PHI restricted
+2026-03-04 16:08:44.367528 | Agent: MedAgent-01 | Field: Diagnosis | Reason: CCPA violation: Data deletion requested
+2026-03-04 16:08:44.373424 | Agent: MedAgent-01 | Field: Diagnosis | Reason: CCPA violation: Data deletion requested
+2026-03-04 16:08:44.380640 | Agent: MedAgent-01 | Field: Diagnosis | Reason: CCPA violation: Data deletion requested
+2026-03-04 16:08:44.385997 | Agent: MedAgent-01 | Field: Diagnosis | Reason: CCPA violation: Data deletion requested
+2026-03-04 16:08:44.390824 | Agent: MedAgent-01 | Field: Diagnosis | Reason: CCPA violation: Data deletion requested
+2026-03-04 16:08:44.401850 | Agent: MedAgent-01 | Field: Diagnosis | Reason: CCPA violation: Data deletion requested
+2026-03-04 16:08:44.437128 | Agent: MedAgent-01 | Field: Diagnosis | Reason: CCPA violation: Data deletion requested
+2026-03-04 16:09:29.322395 | Agent: MedAgent-01 | Field: Diagnosis | Reason: CCPA violation: Data deletion requested
+2026-03-04 16:09:29.330279 | Agent: MedAgent-01 | Field: SSN | Reason: HIPAA violation: Access to PHI restricted
+2026-03-04 16:13:40.470598 | Agent: MedAgent-01 | Field: Diagnosis | Reason: CCPA violation: Data deletion requested
+2026-03-04 16:13:40.487356 | Agent: MedAgent-01 | Field: SSN | Reason: HIPAA violation: Access to PHI restricted
+2026-03-04 16:13:49.622254 | Agent: MedAgent-01 | Field: Diagnosis | Reason: CCPA violation: Data deletion requested
+2026-03-04 16:13:49.632460 | Agent: MedAgent-01 | Field: Diagnosis | Reason: CCPA violation: Data deletion requested
+2026-03-04 16:13:49.645892 | Agent: MedAgent-01 | Field: Diagnosis | Reason: CCPA violation: Data deletion requested
+2026-03-04 16:13:49.655315 | Agent: MedAgent-01 | Field: Diagnosis | Reason: CCPA violation: Data deletion requested
+2026-03-04 16:13:49.662556 | Agent: MedAgent-01 | Field: Diagnosis | Reason: CCPA violation: Data deletion requested
+2026-03-04 16:13:49.681291 | Agent: MedAgent-01 | Field: Diagnosis | Reason: CCPA violation: Data deletion requested
+2026-03-04 16:13:49.726256 | Agent: MedAgent-01 | Field: Diagnosis | Reason: CCPA violation: Data deletion requested
